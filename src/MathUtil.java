@@ -116,23 +116,62 @@ public class MathUtil {
         return num;
     }
 
+   public static void main(String[] args) {
     // Test cases for static methods
-    public static void main(String[] args) {
-        System.out.println("isPrime(29): " + MathUtil.isPrime(29));
-        System.out.println("gcd(24, 36): " + MathUtil.gcd(24, 36));
-        System.out.println("lcm(4, 5): " + MathUtil.lcm(4, 5));
-        System.out.println("fibonacci(6): " + MathUtil.fibonacci(6));
-        System.out.println("factorial(5): " + MathUtil.factorial(5));
+    System.out.println("Static Method Tests:");
+    
+    // Test isPrime
+    System.out.println("isPrime(7): " + isPrime(7));    
+    System.out.println("isPrime(10): " + isPrime(10));  
+    System.out.println("isPrime(13): " + isPrime(13)); 
 
-        //  test non-static methods
-        MathUtil mathUtil = new MathUtil();
+    // Test gcd
+    System.out.println("gcd(24, 36): " + gcd(24, 36));   
+    System.out.println("gcd(54, 24): " + gcd(54, 24));   
+    System.out.println("gcd(100, 75): " + gcd(100, 75)); 
 
-        // Test cases for non-static methods
-        System.out.println("\nNon-Static Methods Test:");
-        System.out.println("isPerfectNumber(28): " + mathUtil.isPerfectNumber(28));
-        System.out.println("sumOfDigits(123): " + mathUtil.sumOfDigits(123));
-        System.out.println("reverseNumber(12345): " + mathUtil.reverseNumber(12345));
-        System.out.println("isArmstrongNumber(153): " + mathUtil.isArmstrongNumber(153));
-        System.out.println("nextPrime(10): " + mathUtil.nextPrime(10));
-    }
+    // Test lcm
+    System.out.println("lcm(24, 36): " + lcm(24, 36));   
+    System.out.println("lcm(5, 10): " + lcm(5, 10));     
+    System.out.println("lcm(12, 15): " + lcm(12, 15));   
+
+    // Test fibonacci
+    System.out.println("fibonacci(0): " + fibonacci(0));  
+    System.out.println("fibonacci(1): " + fibonacci(1));   
+    System.out.println("fibonacci(10): " + fibonacci(10));
+
+    // Test factorial
+    System.out.println("factorial(5): " + factorial(5));   
+    System.out.println("factorial(0): " + factorial(0));   
+    System.out.println("factorial(4): " + factorial(4));   
+
+    // Test cases for non-static methods
+    MathUtil util = new MathUtil();
+    System.out.println("\nNon-Static Method Tests:");
+
+    // Test isPerfectNumber
+    System.out.println("isPerfectNumber(28): " + util.isPerfectNumber(28));   
+    System.out.println("isPerfectNumber(6): " + util.isPerfectNumber(6));    
+    System.out.println("isPerfectNumber(10): " + util.isPerfectNumber(10));   
+
+    // Test sumOfDigits
+    System.out.println("sumOfDigits(123): " + util.sumOfDigits(123));   
+    System.out.println("sumOfDigits(456): " + util.sumOfDigits(456));  
+    System.out.println("sumOfDigits(0): " + util.sumOfDigits(0));       
+
+    // Test reverseNumber
+    System.out.println("reverseNumber(12345): " + util.reverseNumber(12345)); 
+    System.out.println("reverseNumber(100): " + util.reverseNumber(100));    
+    System.out.println("reverseNumber(9876): " + util.reverseNumber(9876));   
+
+    // Test isArmstrongNumber
+    System.out.println("isArmstrongNumber(153): " + util.isArmstrongNumber(153)); 
+    System.out.println("isArmstrongNumber(9474): " + util.isArmstrongNumber(9474)); 
+    System.out.println("isArmstrongNumber(123): " + util.isArmstrongNumber(123)); 
+
+    // Test nextPrime
+    System.out.println("nextPrime(11): " + util.nextPrime(11));   
+    System.out.println("nextPrime(14): " + util.nextPrime(14));   
+    System.out.println("nextPrime(20): " + util.nextPrime(20));   
+}
 }
